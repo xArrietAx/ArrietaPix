@@ -113,7 +113,7 @@ export class Authentication {
         {
           from: "andresarrieta2323@gmail.com",
           to: email,
-          subject: "!Hello¡ I'm ArrietA",
+          subject: "¡Hello! I'm ArrietA",
           text: `Here is your key :) : ${key}
           If you did not request a password reset you can ignore this email.
           `,

@@ -8,7 +8,7 @@ export default async function VerifyToken(req) {
     await jwtVerify(Token, secretKey)
     return NextResponse.next()
   } catch (err) {
-    return NextResponse.redirect(process.env.MODE === "dev" ? "http://localhost:3000/Auth/Signin" : "http://localhost:3000/Auth/Signup")
+    return NextResponse.redirect(process.env.MODE === "dev" ? "http://localhost:3000/Auth/Signin" : "https://arrietapix.onrender.com/Auth/Signin")
   }
 }
 
