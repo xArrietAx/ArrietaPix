@@ -22,7 +22,7 @@ export const Left = () => {
             REMEMBER
           </Text>
         </Heading>
-        <Text fontWeight={"semibold"} textColor={"gray.400"}>
+        <Text fontSize={{base:"sm", md:"md", "2xl":"lg"}} fontWeight={"semibold"} textColor={"gray.400"}>
           With ArrietaPix, organize your photos into personalized galleries,
           explore our image collections, and share your memories with friends
           and family. Keep your memories organized and accessible at all times

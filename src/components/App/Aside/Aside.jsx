@@ -21,7 +21,7 @@ export const Aside = ({isOpen, onClose}) => {
     >
         <Top onClose={onClose} />
         <User />
-        <Middle />
+        <Middle onClose={onClose} />
         <Bottom />
     </Flex>
   );

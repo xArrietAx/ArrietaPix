@@ -12,6 +12,7 @@ const UploadFile = () => {
     <>
     <Button w={"full"} maxW={"sm"} colorScheme="red" _hover={{bg:"red.600"}} textColor={"white"} onClick={onOpen}>
       UPLOAD
+      <i className="bi bi-image" style={{marginLeft:"7px"}}></i>
     </Button>
     <Modal isOpen={isOpen} onClose={onClose} />
     </>

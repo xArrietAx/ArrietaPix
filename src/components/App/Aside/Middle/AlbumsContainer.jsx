@@ -9,7 +9,7 @@ const Albums = dynamic(() => import("./Albums"), {
   loading:() => <HStack justifyContent={"center"} my={10}><Spinner color="red.500" size={"md"} /></HStack>
 })
 
-export const AlbumsContainer = () => {
+export const AlbumsContainer = ({close}) => {
 
   let {AlbumsList, setAlbumsList} = useContext(DataContext)
 
@@ -28,7 +28,7 @@ export const AlbumsContainer = () => {
             </Box>
           </Tooltip>
         </HStack>
-        <Albums AlbumsList={AlbumsList} setAlbumsList={setAlbumsList} />
+        <Albums AlbumsList={AlbumsList} setAlbumsList={setAlbumsList} onClose={close} />
       </Box>
       <Modal isOpen={isOpen} setAlbums={setAlbumsList} onClose={onClose} />
     </>

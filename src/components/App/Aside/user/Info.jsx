@@ -15,9 +15,11 @@ const Info = () => {
           <EditUsername setUsername={setUsername} />
           <Text
             as={"span"}
+            display={"block"}
             fontSize={{ base: "lg", "2xl": "2xl" }}
             fontWeight={"semibold"}
             textColor={"white"}
+            textAlign={"center"}
           >
             {Username}
           </Text>

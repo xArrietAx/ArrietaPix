@@ -96,7 +96,7 @@ export class Authentication {
     try {
       let user = await verifyEmail(email);
       if (!user)
-        return res.status(404).json({ message: "Failed to send mail" });
+        return res.status(404).json({ message: "Error sending mail or user not found" });
       let { key, Token } = await generateKey();
       user.TokenJWTResetPassword = Token;
       await user.save();

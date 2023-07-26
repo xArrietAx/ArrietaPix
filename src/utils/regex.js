@@ -6,4 +6,4 @@ export const passwords = /^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[!@#$%^&*()
 
 export const verifyKey = /^[A-Za-z0-9-_]*$/
 
-export const albumsName = /^[a-zA-Z0-9ÁÉÍÓÚÜáéíóúüñÑ\s.]{2,20}$/
+export const albumsName = /^(?!.*\s$)[a-zA-Z0-9ÁÉÍÓÚÜáéíóúüñÑ\s]{2,20}$/

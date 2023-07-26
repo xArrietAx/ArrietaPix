@@ -101,7 +101,7 @@ export default function AddAlbumModal({ onClose, isOpen, setAlbums }) {
                     },
                     pattern: {
                       value: albumsName,
-                      message: "The name is invalid",
+                      message: "The name is invalid. It must not have trailing spaces and it can only consist of letters and numbers.",
                     },
                   })}
                 />
