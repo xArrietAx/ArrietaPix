@@ -1,15 +1,14 @@
 import { setCookie } from "cookies-next";
-import { Authentication } from "@/Database/Auth";
+import { verifyEmail } from "@/utils/VerifyEmail";
 import { generateToken } from "./GenerateToken";
 import { verifyToken } from "./VerifyToken";
 import {compare} from "bcrypt";
 
-let Auth = new Authentication()
-
 export async function verifyKey(req, res, data) {
     try {
       let {email, key} = data
-      let user = await Auth.verifyEmail(res, email, "Unexpected error")
+      let user = await verifyEmail(email)
+      if (!user) return res.status(404).json({ message: "Error finding your email" });
       let keybcrypt = await verifyToken(user.TokenJWTResetPassword)
       let keyCompared = await compare(key, keybcrypt);
       if(!keyCompared) return res.status(404).json({ message:"Provide a valid key" });
@@ -24,7 +23,9 @@ export async function verifyKey(req, res, data) {
       });
       return res.status(200).json({ok:true})
     } catch (err) {
-      console.log(err);
+     if (err.code === "ERR_JWT_EXPIRED") {
+      return res.status(500).json({message:"Key expired, try again!"})
+     }
       return res.status(500).json({message:"Internal Server Error"})
     }
    }
