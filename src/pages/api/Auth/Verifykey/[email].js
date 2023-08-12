@@ -1,6 +1,6 @@
 import joi from "joi";
 import { verifyKey } from "@/utils/VerifyKey";
-import { verifyKey as key } from "@/utils/regex";
+import { verifyKey as key } from "@/const/regex";
 
 const schema = joi.string().required().min(4).max(10).pattern(
     key

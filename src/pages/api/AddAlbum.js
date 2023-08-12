@@ -3,7 +3,7 @@ import { Album } from "@/Database/Model/AlbumSchema";
 import { User } from "@/Database/Model/UserSchema";
 import { verifyToken } from "@/utils/VerifyToken";
 import { GetAlbums } from "@/utils/GetAlbums";
-import { albumsName } from "@/utils/regex";
+import { albumsName } from "@/const/regex";
 
 
 let Schema = joi.string().required().min(2).max(20).pattern(

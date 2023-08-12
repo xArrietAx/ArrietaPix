@@ -16,7 +16,7 @@ import {
   useToast,
 } from "@chakra-ui/react";
 import axios from "axios";
-import { albumsName } from "@/utils/regex";
+import { albumsName } from "@/const/regex";
 
 export default function AddAlbumModal({ onClose, isOpen, setAlbums }) {
   let Router = useRouter();

@@ -13,7 +13,7 @@ import {
   InputRightElement,
 } from "@chakra-ui/react";
 import axios from "axios";
-import { passwords } from "@/utils/regex";
+import { passwords } from "@/const/regex";
 
 export function Form() {
   let Router = useRouter();

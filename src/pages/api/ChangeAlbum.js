@@ -1,7 +1,7 @@
 import joi from "joi";
 import { verifyToken } from "@/utils/VerifyToken";
 import { VerifyId } from "@/utils/VerifyId";
-import { albumsName } from "@/utils/regex";
+import { albumsName } from "@/const/regex";
 import { User } from "@/Database/Model/UserSchema";
 import { Album } from "@/Database/Model/AlbumSchema";
 import { Photo } from "@/Database/Model/PhotoSchema";

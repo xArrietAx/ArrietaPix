@@ -13,7 +13,7 @@ import {
   useToast,
 } from "@chakra-ui/react";
 import axios from "axios";
-import { usernames, emails, passwords } from "@/utils/regex";
+import { usernames, emails, passwords } from "@/const/regex";
 
 export function Form() {
   let Router = useRouter();

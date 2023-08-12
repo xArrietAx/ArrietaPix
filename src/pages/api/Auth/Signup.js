@@ -1,6 +1,6 @@
 import joi from "joi";
 import { Authentication } from "@/Database/Auth";
-import { passwords, emails, usernames } from "@/utils/regex";
+import { passwords, emails, usernames } from "@/const/regex";
 
 let Auth = new Authentication()
 

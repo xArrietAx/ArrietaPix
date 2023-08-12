@@ -16,7 +16,7 @@ import axios from "axios";
 import { useRouter } from "next/router";
 import { useForm } from "react-hook-form";
 import { useRef, useState } from "react";
-import { usernames } from "@/utils/regex";
+import { usernames } from "@/const/regex";
 
 export default function changeUsernameModal({ onClose, isOpen, setUsername }) {
   let {

@@ -1,7 +1,7 @@
 import joi from "joi";
 import { User } from "@/Database/Model/UserSchema";
 import { verifyToken } from "@/utils/VerifyToken";
-import { usernames } from "@/utils/regex";
+import { usernames } from "@/const/regex";
 
 let Schema = joi
 .string()

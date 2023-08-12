@@ -19,18 +19,15 @@ export default async function handler(req, res) {
     if (!base64) return res.status(404).json({message:"The file or name is required"})
     let id = await verifyToken(SECRET)
     let user = await Auth.getUser(id)
-    if (user.avatar.filesIds.length >= 10) {
-      await imagekit.bulkDeleteFiles(user.avatar.filesIds)
-      user.avatar.filesIds = []
-      await user.save()
-    }
+    if (user.avatar.id) await imagekit.deleteFile(user.avatar.id)
     imagekit.upload({
       file:base64,
       fileName:"Avatar_profile"
     }, async (err, result) => {
       if (err) return res.status(400).json(err)
       user.avatar.name = result.name
-      user.avatar.filesIds.push(result.fileId) 
+      user.avatar.id = result.fileId
+      console.log(result);
       await user.save()
       return res.status(200).json(user.avatar.name)
     })

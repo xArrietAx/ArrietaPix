@@ -11,7 +11,7 @@ import {
   FormLabel
 } from "@chakra-ui/react";
 import axios from "axios";
-import { emails } from "@/utils/regex";
+import { emails } from "@/const/regex";
 
 export function Form() {
   let Router = useRouter();

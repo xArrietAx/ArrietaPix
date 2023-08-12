@@ -1,6 +1,6 @@
 import joi from "joi";
 import { Authentication } from "@/Database/Auth";
-import { passwords } from "@/utils/regex";
+import { passwords } from "@/const/regex";
 
 let schema = joi.object({
  password: joi.string().required().min(8).pattern(

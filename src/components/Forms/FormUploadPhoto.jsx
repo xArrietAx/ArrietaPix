@@ -15,7 +15,7 @@ import axios from "axios";
 import DefaultImage from "../../../public/DefaultImage.png";
 import { generateBase64 } from "@/utils/GenerateBase64";
 import { DataContext } from "@/Context/DataContext";
-import { albumsName } from "@/utils/regex";
+import { albumsName } from "@/const/regex";
 
 export default ({ errors, handleSubmit, register, Close, initialRef }) => {
   

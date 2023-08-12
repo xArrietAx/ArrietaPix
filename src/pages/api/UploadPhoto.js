@@ -5,7 +5,7 @@ import { User } from "@/Database/Model/UserSchema";
 import { imagekit } from "../../Database/ImageKit/config";
 import { verifyToken } from "@/utils/VerifyToken";
 import { VerifyId } from "@/utils/VerifyId";
-import { albumsName } from "@/utils/regex";
+import { albumsName } from "@/const/regex";
 
 export const config = {
   api: {

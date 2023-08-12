@@ -14,7 +14,7 @@ import {
   useToast
 } from "@chakra-ui/react";
 import axios from "axios";
-import { emails, passwords } from "@/utils/regex";
+import { emails, passwords } from "@/const/regex";
 
 export function Form() {
 

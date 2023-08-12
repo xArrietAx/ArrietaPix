@@ -11,7 +11,7 @@ import {
   useToast
 } from "@chakra-ui/react";
 import axios from "axios";
-import { verifyKey } from "@/utils/regex";
+import { verifyKey } from "@/const/regex";
 
 export function Form() {
 

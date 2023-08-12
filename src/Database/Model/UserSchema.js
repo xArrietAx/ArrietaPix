@@ -21,9 +21,9 @@ let UserSchema = new Schema({
     name: {
       type: String
     },
-    filesIds: [{
+    id: {
       type: String
-    }]
+    }
   },
   albums: [{ 
     type: Schema.Types.ObjectId, 
